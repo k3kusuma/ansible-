@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+  - name: install git in node1
+    yum:
+      name: git
+      state: present
+  - name: install wget in node1
+    yum:
+      name: wget
+      state: present
+  - name: install tree
+    yum:  
+      name: tree
+      state: present
